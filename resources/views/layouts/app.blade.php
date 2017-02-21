@@ -92,15 +92,22 @@
                 </div>
                 <ul class="inbox-nav inbox-divider">
                     <li class="active">
-                        <a href="#"><i class="fa fa-plus"></i> add room <span
-                                    class="label label-danger pull-right">2</span></a>
+                        <router-link to="/chat"><i class="fa fa-plus"></i> chat</router-link>
 
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-user"></i> my rooms</a>
+                        {{--<a href="#"><i class="fa fa-plus"></i> add room <span--}}
+                                    {{--class="label label-danger pull-right">2</span></a>--}}
+                        <router-link to="/add_room"><i class="fa fa-plus"></i> add room</router-link>
+
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-users"></i> all rooms</a>
+                        {{--<a ><i class="fa fa-user"></i> my rooms</a>--}}
+                        <router-link to="/my_rooms"><i class="fa fa-user"></i> my rooms</router-link>
+                    </li>
+                    <li>
+                        {{--<a href="#"><i class="fa fa-users"></i> all rooms</a>--}}
+                        <router-link to="/all_rooms"><i class="fa fa-users"></i> all rooms</router-link>
                     </li>
                 </ul>
                 <div style="visibility: hidden">
@@ -143,7 +150,7 @@
                     </form>
                 </div>
                 <div class="inbox-body">
-                    @{{ message }}
+{{--                    @{{ message }}--}}
                     @yield('content')
                 </div>
             </aside>
